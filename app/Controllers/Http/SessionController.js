@@ -1,15 +1,14 @@
 'use strict'
 
+const Database = use('Database')
+
 class SessionController {
-  async store({ auth, request, response }) {
-    const {email, password} = request.only([
-      'email',
-      'password'
-    ]);
+  async store({ auth, request }) {
+    const { email, password } = request.only(['email', 'password'])
 
-    const { token } = await auth.attempt(email, password);
+    const { token } = await auth.attempt(email, password)
 
-    return { token };
+    return { token }
   }
 }
 
