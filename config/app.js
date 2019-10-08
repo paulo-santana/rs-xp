@@ -1,5 +1,5 @@
 /** @type {import('@adonisjs/framework/src/Env')} */
-const Env = use('Env');
+const Env = use('Env')
 
 module.exports = {
   /*
@@ -236,4 +236,4 @@ module.exports = {
     path: '/',
     maxAge: 7200,
   },
-};
+}

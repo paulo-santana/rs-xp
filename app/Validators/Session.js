@@ -3,8 +3,8 @@ class Session {
     return {
       email: 'email|required',
       password: 'required',
-    };
+    }
   }
 }
 
-module.exports = Session;
+module.exports = Session

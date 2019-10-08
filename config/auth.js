@@ -1,5 +1,5 @@
 /** @type {import('@adonisjs/framework/src/Env')} */
-const Env = use('Env');
+const Env = use('Env')
 
 module.exports = {
   /*
@@ -89,4 +89,4 @@ module.exports = {
     uid: 'email',
     password: 'password',
   },
-};
+}

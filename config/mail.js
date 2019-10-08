@@ -1,4 +1,4 @@
-const Env = use('Env');
+const Env = use('Env')
 
 module.exports = {
   /*
@@ -95,4 +95,4 @@ module.exports = {
   ethereal: {
     driver: 'ethereal',
   },
-};
+}

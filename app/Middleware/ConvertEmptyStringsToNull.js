@@ -5,11 +5,11 @@ class ConvertEmptyStringsToNull {
         ...Object.keys(request.body).map(key => ({
           [key]: request.body[key] !== '' ? request.body[key] : null,
         }))
-      );
+      )
     }
 
-    await next();
+    await next()
   }
 }
 
-module.exports = ConvertEmptyStringsToNull;
+module.exports = ConvertEmptyStringsToNull

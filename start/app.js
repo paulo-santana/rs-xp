@@ -18,7 +18,7 @@ const providers = [
   '@adonisjs/vow/providers/VowProvider',
   '@adonisjs/framework/providers/ViewProvider',
   '@adonisjs/validator/providers/ValidatorProvider',
-];
+]
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ const providers = [
 | Providers for migrations, tests etc.
 |
 */
-const aceProviders = ['@adonisjs/lucid/providers/MigrationsProvider'];
+const aceProviders = ['@adonisjs/lucid/providers/MigrationsProvider']
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +43,7 @@ const aceProviders = ['@adonisjs/lucid/providers/MigrationsProvider'];
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {};
+const aliases = {}
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +53,6 @@ const aliases = {};
 | Here you store ace commands for your package
 |
 */
-const commands = [];
+const commands = []
 
-module.exports = { providers, aceProviders, aliases, commands };
+module.exports = { providers, aceProviders, aliases, commands }
