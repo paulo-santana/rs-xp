@@ -77,10 +77,12 @@ test('it cannot reset password after 2h of forgot password request', async ({
 
   await user.tokens().save(userToken);
 
-  const dateWithSub = format(subHours(new Date(), 5), 'yyyy-MM-dd HH:ii:ss');
+  const dateWithSub = format(subHours(new Date(), 6), 'yyyy-MM-dd HH:ii:ss');
   await Database.table('tokens')
     .where('token', userToken.token)
     .update('created_at', dateWithSub);
+
+  await userToken.reload();
 
   const response = await client
     .post('/reset')
@@ -92,4 +94,7 @@ test('it cannot reset password after 2h of forgot password request', async ({
     .end();
 
   response.assertStatus(400);
+  response.assertJSONSubset({
+    error: 'Expired Token. Please try requesting the reset again.',
+  });
 });
