@@ -169,7 +169,7 @@ module.exports = {
     | based on HTTP headers/query string.
     |
     */
-    locale: 'pt',
+    locale: 'en',
   },
 
   logger: {
